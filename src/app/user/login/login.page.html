@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <img alt="Silhouette of mountains" src="../assets/img/logo.jpg" />
+  <ion-card>
+    <ion-card-header>
+      <ion-item lines="none" detail="false">
+        <ion-icon slot="start" [name]="'person-circle-outline'"></ion-icon>
+        <ion-label>Login</ion-label>
+      </ion-item>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formularioLogin"> 
+        <ion-item lines="full">
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input formControlName="nombre"></ion-input>
+        </ion-item> 
+        <ion-item lines="full">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
+        <ion-row>
+          <ion-col> 
+          <ion-button type="submit" expand="block" (click)="ingresar()">ingresar</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/registro']">
+      Registrarse
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+
